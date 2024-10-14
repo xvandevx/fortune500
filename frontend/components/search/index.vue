@@ -4,7 +4,7 @@
       type="text"
       v-model="query"
       @input="onSearch"
-      placeholder="Enter company name..."
+      placeholder="Enter company name or ticker..."
     />
     <div v-if="loading">Loading...</div>
     <ul v-if="results.length">
