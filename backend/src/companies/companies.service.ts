@@ -24,7 +24,6 @@ export class CompaniesService {
 
   async getByQuery(query: string) {
     return await this.companiesRepository.findAll({
-      //select: ['id', 'Rank', 'Company'],
       where: {
         [Op.or]: [
           {
@@ -54,7 +53,6 @@ export class CompaniesService {
   }
 
   async addItem(data) {
-    console.log('add init', data.Rank);
     try {
       await this.companiesRepository.create({
         Rank: data.Rank,

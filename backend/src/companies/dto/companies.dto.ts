@@ -1,4 +1,4 @@
-import {CompaniesType, CompaniesFields} from "../../../types/companies";
+import { CompaniesType, CompaniesFields } from '../../../types/companies';
 
 export class CompaniesDto implements CompaniesType {
   readonly [CompaniesFields.Rank]: string;
