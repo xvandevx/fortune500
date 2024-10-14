@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import {ConfigModule} from "@nestjs/config";
-import {SequelizeModule} from "@nestjs/sequelize";
-import {Companies} from "./companies/companies.model";
-import {CompaniesModule} from "./companies/companies.module";
+import { ConfigModule } from '@nestjs/config';
+import { SequelizeModule } from '@nestjs/sequelize';
+import { Companies } from './companies/companies.model';
+import { CompaniesModule } from './companies/companies.module';
 
 @Module({
   imports: [
@@ -16,9 +16,7 @@ import {CompaniesModule} from "./companies/companies.module";
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
-      models: [
-        Companies,
-      ],
+      models: [Companies],
       autoLoadModels: true,
       logging: false,
       synchronize: true,
